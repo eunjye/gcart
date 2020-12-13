@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+
+@font-face{ 
+	font-family:'NotoSans';
+	font-weight:400;
+	src:url('../font/NotoSans-Regular.eot');
+	src:url('../font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), 
+			url('../font/NotoSans-Regular.woff2') format('woff2'), 
+			url('../font/NotoSans-Regular.woff') format('woff'), 
+			url('../font/NotoSans-Regular.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'NotoSans';
+	font-weight:500;
+	src:url('../font/NotoSans-Medium.eot');
+	src:url('../font/NotoSans-Medium.eot?#iefix') format('embedded-opentype'), 
+			url('../font/NotoSans-Medium.woff2') format('woff2'), 
+			url('../font/NotoSans-Medium.woff') format('woff'), 
+			url('../font/NotoSans-Medium.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'NotoSans';
+	font-weight:700;
+	src:url('../font/NotoSans-Bold.eot');
+	src:url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), 
+			url('../font/NotoSans-Bold.woff2') format('woff2'), 
+			url('../font/NotoSans-Bold.woff') format('woff'), 
+			url('../font/NotoSans-Bold.ttf') format('truetype');
+	}
+@font-face{ 
+	font-family:'NotoSans';
+	font-weight:800;
+	src:url('../font/NotoSans-Black.eot');
+	src:url('../font/NotoSans-Black.eot?#iefix') format('embedded-opentype'), 
+			url('../font/NotoSans-Black.woff2') format('woff2'), 
+			url('../font/NotoSans-Black.woff') format('woff'), 
+			url('../font/NotoSans-Black.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'NotoSans';
+	font-weight:300;
+	src:url('../font/NotoSans-Light.eot');
+	src:url('../font/NotoSans-Light.eot?#iefix') format('embedded-opentype'), 
+			url('../font/NotoSans-Light.woff2') format('woff2'), 
+			url('../font/NotoSans-Light.woff') format('woff'), 
+			url('../font/NotoSans-Light.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'Roboto';
+	font-weight:400;
+	src:url('../font/Roboto-Regular.eot');
+	src:url('../font/Roboto-Regular.eot?#iefix') format('embedded-opentype'), 
+			url('../font/Roboto-Regular.woff2') format('woff2'), 
+			url('../font/Roboto-Regular.woff') format('woff'), 
+			url('../font/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'Roboto';
+	font-weight:300;
+	src:url('../font/Roboto-Light.eot');
+	src:url('../font/Roboto-Light.eot?#iefix') format('embedded-opentype'), 
+			url('../font/Roboto-Light.woff2') format('woff2'), 
+			url('../font/Roboto-Light.woff') format('woff'), 
+			url('../font/Roboto-Light.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'Roboto';
+	font-weight:500;
+	src:url('../font/Roboto-Medium.eot');
+	src:url('../font/Roboto-Medium.eot?#iefix') format('embedded-opentype'), 
+			url('../font/Roboto-Medium.woff2') format('woff2'), 
+			url('../font/Roboto-Medium.woff') format('woff'), 
+			url('../font/Roboto-Medium.ttf') format('truetype');
+}
+@font-face{ 
+	font-family:'Roboto';
+	font-weight:700;
+	src:url('../font/Roboto-Bold.eot');
+	src:url('../font/Roboto-Bold.eot?#iefix') format('embedded-opentype'), 
+			url('../font/Roboto-Bold.woff2') format('woff2'), 
+			url('../font/Roboto-Bold.woff') format('woff'), 
+			url('../font/Roboto-Bold.ttf') format('truetype');
+}
