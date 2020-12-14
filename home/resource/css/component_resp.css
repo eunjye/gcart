@@ -15,6 +15,7 @@
 	.tit-sub { margin-bottom:5px; font-size:24px; }
 	.tit-d1 { font-size:50px; }
 	.tit-d2 { font-size:35px; }
+	.tit-d3 { font-size:25px; }
 	.desc-d1 { font-size:20px; }
 	.desc-d2 { margin-top:10px; font-size:18px; word-break:keep-all; }
 	.desc-d1:before { margin:15px auto 25px; }
@@ -51,16 +52,16 @@
 	.nav-d2 > li { margin-top:10px; }
 
 	/* main : visual */
-	.visual-area { height:0; padding-top:55vh; }
-	.visual-area.main { height:0; }
+	.visual-area { height:0; padding-top:40vh; }
+	.visual-area.main { height:0; padding-top:55vh; }
 	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; }
 	.visual-area.main .tit-area { top:50%; transform:translateY(-50%); }
 
 	.slider-pagination.type-num { bottom:5%; }
 	.slider-pagination.type-num a { font-size:16px; }
 
-	/* main : bussiness */
-	.cont-area.bussiness { background:#ededed; }
+	/* main : business */
+	.cont-area.business { background:#ededed; }
 	.link-list a { height:250px; }
 	.link-list a div { padding-top:28px; }
 	.link-list strong { max-width:111px; font-size:30px; }
@@ -97,6 +98,7 @@
 	.tit-sub { font-size:20px; }
 	.tit-d1 { font-size:35px; }
 	.tit-d2 { font-size:28px; }
+	.tit-d3 { font-size:24px; }
 	.desc-d1 { font-size:18px; padding:0 20px; }
 	.desc-d2 { font-size:16px; margin-top:15px; padding:0 20px; }
 
