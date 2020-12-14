@@ -1,9 +1,8 @@
 ;(function ($, win, doc, undefined) {
 	
-	var GC = {};
 	var namespace = 'GC';
 
-	win[namespace] = GC = {
+	win[namespace] = {
 		status: {
 			scrollY: 0,
 			scrollDirection: '',
@@ -86,7 +85,7 @@
 		nav: {
 			hoverMenu: function(){
 				var $header = $('.header-area');
-				var $link = $header.find('.nav-d1 > li > a')
+				var $link = $header.find('.nav-d1 > li > a');
 
 				$link
 					.off('.hoverOnLink')

@@ -153,7 +153,7 @@ body { font-family:'Roboto', 'NotoSans', 'Dotum', 'sans-serif'; font-weight:500;
 
 /* page content
 ====================== */
-.article { position:relative; max-width:1195px; border-top:2px solid #000; padding:37px 0 40px; margin:40px auto; }
+.article { position:relative; max-width:1195px; border-top:2px solid #000; padding:37px 0 40px; margin:40px auto 0; }
 .article:first-child { margin-top:0; }
 .article .tit-area.pc-pdr-s { padding-right:195px; }
 .article .desc-d2 { text-align:left; }

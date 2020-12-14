@@ -53,8 +53,9 @@
 
 	/* main : visual */
 	.visual-area { height:0; padding-top:40vh; }
+	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; padding-top:70px; }
+	.visual-area .tit-area { margin-top:calc(20vh - 35px); transform:translateY(-50%); }
 	.visual-area.main { height:0; padding-top:55vh; }
-	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; }
 	.visual-area.main .tit-area { top:50%; transform:translateY(-50%); }
 
 	.slider-pagination.type-num { bottom:5%; }
@@ -99,8 +100,8 @@
 	.tit-d1 { font-size:35px; }
 	.tit-d2 { font-size:28px; }
 	.tit-d3 { font-size:24px; }
-	.desc-d1 { font-size:18px; padding:0 20px; }
-	.desc-d2 { font-size:16px; margin-top:15px; padding:0 20px; }
+	.desc-d1 { font-size:18px; }
+	.desc-d2 { font-size:16px; margin-top:15px; }
 
 	.footer-area .footer-grid { display:block; }
 	.footer-area .logo { display:block; }
@@ -118,4 +119,9 @@
 	.bbs-list .category:after { content:"]"; }
 	.bbs-list .date { position:absolute; bottom:0; left:0; text-align:left; }
 	.bbs-list .subject a { max-width:calc(100% - 73px); }
+
+	.article { padding:23px 0 25px; }
+	.article .tit-area.pc-pdr-s { padding-right:0; }
+	.article .btn-area { position:static; margin-top:25px; text-align:center; }
+	.article .img-area { margin-top:20px; }
 }
