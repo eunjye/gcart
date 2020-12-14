@@ -51,7 +51,7 @@
 	.nav-d2 > li { margin-top:10px; }
 
 	/* main : visual */
-	.visual-area { height:0; padding-top:95vh; }
+	.visual-area { height:0; padding-top:55vh; }
 	.visual-area.main { height:0; }
 	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; }
 	.visual-area.main .tit-area { top:50%; transform:translateY(-50%); }

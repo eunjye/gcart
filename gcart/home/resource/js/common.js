@@ -1,45 +1,46 @@
 ;(function ($, win, doc, undefined) {
 	
 	var GC = {};
+	var namespace = 'GC';
 
-	win.GC = GC = {
+	win[namespace] = GC = {
 		status: {
 			scrollY: 0,
 			scrollDirection: '',
 			scrollIsHome: function(){
-				return GC.status.scrollY === 0 ? true : false;
+				return win[namespace].status.scrollY === 0 ? true : false;
 			},
 			scrollIsEnd: function(){
-				return GC.status.scrollY + $(win).outerHeight() === $(doc).outerHeight() ? true : false;
+				return win[namespace].status.scrollY + $(win).outerHeight() === $(doc).outerHeight() ? true : false;
 			},
 			scrollCheck: {
 				beforeScrollY: 0,
 				direction: function(){
-					return GC.status.scrollCheck.beforeScrollY < GC.status.scrollY ? 
+					return win[namespace].status.scrollCheck.beforeScrollY < win[namespace].status.scrollY ? 
 						'down' : 'up';
 				},
 				init: function(){
 					function bodyAddClass() {
 						var $body = $('body');
-						if (!!GC.status.scrollIsHome()) {
+						if (!!win[namespace].status.scrollIsHome()) {
 							$body.addClass('is-home');
-						} else if (!!GC.status.scrollIsEnd()) {
+						} else if (!!win[namespace].status.scrollIsEnd()) {
 							$body.addClass('is-end');
 						} else {
 							$body.removeClass('is-home is-end');
 						}
 					}
-					GC.status.scrollY = $('html').prop('scrollTop');
-					GC.status.scrollIsHome();
-					GC.status.scrollIsEnd();
+					win[namespace].status.scrollY = $('html').prop('scrollTop');
+					win[namespace].status.scrollIsHome();
+					win[namespace].status.scrollIsEnd();
 					bodyAddClass();
 
 					$(doc).off('scroll.scrollCheck').on('scroll.scrollCheck', function(){
-						GC.status.scrollY = $('html').prop('scrollTop');
-						GC.status.scrollDirection = GC.status.scrollCheck.direction();
-						GC.status.scrollCheck.beforeScrollY = GC.status.scrollY;
-						GC.status.scrollIsHome();
-						GC.status.scrollIsEnd();
+						win[namespace].status.scrollY = $('html').prop('scrollTop');
+						win[namespace].status.scrollDirection = win[namespace].status.scrollCheck.direction();
+						win[namespace].status.scrollCheck.beforeScrollY = win[namespace].status.scrollY;
+						win[namespace].status.scrollIsHome();
+						win[namespace].status.scrollIsEnd();
 						bodyAddClass();
 					});
 
@@ -49,7 +50,7 @@
 		navLoad: function(){
 			(function () {
 				return new Promise(function(resolve, reject) {
-					$.get('/home/include/header.html', function(response) {
+					$.get('/gcart/home/include/header.html', function(response) {
 						if (response) {
 							resolve(response);
 						}
@@ -59,17 +60,17 @@
 			})()
 			.then(function(data) {
 				$('.header-area').html(data);
-				GC.nav.hoverMenu(); // hover evt on nav
-				GC.nav.slidingMenu(); // show/hide evt on nav
+				win[namespace].nav.hoverMenu(); // hover evt on nav
+				win[namespace].nav.slidingMenu(); // show/hide evt on nav
 				
 			}).catch(function(err) {
-				console.error('win.GC.navLoad failed!!');
+				console.error('win.'+namespace+'.navLoad failed!!');
 			});
 		},
 		footerLoad: function(){
 			(function () {
 				return new Promise(function(resolve, reject) {
-					$.get('/home/include/footer.html', function(response) {
+					$.get('/gcart/home/include/footer.html', function(response) {
 						if (response) {
 							resolve(response);
 						}
@@ -79,7 +80,7 @@
 			})().then(function(data) {
 				$('.footer-area').html(data);
 			}).catch(function(err) {
-				console.error('win.GC.footerLoad failed!!');
+				console.error('win.'+namespace+'.footerLoad failed!!');
 			});
 		},
 		nav: {
@@ -110,7 +111,7 @@
 		mainSlider: {
 			slide: {},
 			init: function(){
-				GC.mainSlider.slide = $('.slider-visual .slider-inner').slick({
+				win[namespace].mainSlider.slide = $('.slider-visual .slider-inner').slick({
 					infinite: true,
 					speed: 400,
 					autoplay: true,
@@ -127,21 +128,21 @@
 		},
 		init: function(){
 
-			$(win).off('.GC');
+			$(win).off('.'+namespace);
 
-			$(doc).on('ready.GC', function(){
-				GC.navLoad();
-				GC.footerLoad();
-				GC.status.scrollCheck.init();
+			$(doc).on('ready.'+namespace, function(){
+				win[namespace].navLoad();
+				win[namespace].footerLoad();
+				win[namespace].status.scrollCheck.init();
 
-				GC.nav.hoverMenu(); // hover evt on nav
-				GC.nav.slidingMenu(); // show/hide evt on nav
+				win[namespace].nav.hoverMenu(); // hover evt on nav
+				win[namespace].nav.slidingMenu(); // show/hide evt on nav
 			})
-			$(doc).on('scroll.GC', function(){
+			$(doc).on('scroll.'+namespace, function(){
 
 			})
 		}
 	}
 	
-	GC.init();
+	win[namespace].init();
 })(jQuery, window, document);
