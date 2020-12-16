@@ -53,7 +53,7 @@
 						if (response) {
 							resolve(response);
 						}
-						reject(new Error("Request is failed"));
+						reject(new Error('Request is failed'));
 					});
 				});
 			})()
@@ -73,7 +73,7 @@
 						if (response) {
 							resolve(response);
 						}
-						reject(new Error("Request is failed"));
+						reject(new Error('Request is failed'));
 					});
 				});
 			})().then(function(data) {
@@ -85,16 +85,25 @@
 		nav: {
 			hoverMenu: function(){
 				var $header = $('.header-area');
-				var $link = $header.find('.nav-d1 > li > a');
+				var $links = $header.find('.gnb-area a');
+				var flag = {};
 
-				$link
-					.off('.hoverOnLink')
-					.on('mouseenter.hoverOnLink', function(){
+				$links
+          .off('.openMenuPC')
+          .on('mouseenter.openMenuPC focus.openMenuPC', function () {
 						$header.addClass('hover');
-						$header.on('mouseleave.hoverOnLink', function(){
-							$header.removeClass('hover');
-						})
-					})
+						clearTimeout(flag);
+            $header
+              .off('.closeMenuPC')
+              .on('mouseleave.closeMenuPC', removeHover);
+            $links.off('.closeMenuPC').on('blur.closeMenuPC', removeHover);
+          });
+					
+				function removeHover() {
+					flag = setTimeout(function () {
+            $header.removeClass('hover');
+          }, 1);
+        }
 			},
 			slidingMenu: function(){
 				var $header = $('.header-area');
