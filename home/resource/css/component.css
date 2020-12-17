@@ -72,6 +72,7 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 .paging-area { margin-top:40px; text-align:center; }
 .btn-jump { position:relative; display:inline-block; margin:0 5px; vertical-align:middle; width:35px; height:35px; border-radius:5px; overflow:hidden; color:transparent; font-size:xx-small; }
 .btn-jump:before { position:absolute; top:50%; left:50%; width:20px; height:20px; margin:-10px 0 0 -14px; border-top:1px solid #919191; border-right:1px solid #919191; transform:rotate(45deg); content:""; }
+.btn-jump.disabled { pointer-events:none; opacity:.3; }
 .btn-jump.prev:before { transform:rotate(-135deg); margin:-10px 0 0 -2px;}
 .btn-jump:hover:before { border-color:#f79433; }
 .paging-link { display:inline-block; vertical-align:middle; }
@@ -102,11 +103,14 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 .nav-d1 { position:relative; }
 .nav-d1 > li { position:relative; display:inline-block; margin:0 33px; color:#fff; font-size:24px; }
 .nav-d1 > li > a:hover,
-.nav-d1 > li:hover > a { color:#f79433; }
+.nav-d1 > li:hover > a,
+.nav-d1 > li > a:focus,
+.nav-d1 > li:focus > a { color:#f79433; }
 .nav-d1 > li:last-child { margin-right:0; }
 .nav-d2 { display:none; position:absolute; top:75px; left:50%; margin-left:-75px; width:150px; color:#000; font-weight:400; font-size:18px; text-align:center; }
 .nav-d2 > li { margin-top:12px; }
-.nav-d2 > li > a:hover { font-weight:700; }
+.nav-d2 > li > a:hover,
+.nav-d2 > li > a:focus { font-weight:700; }
 
 /* footer
 ====================== */

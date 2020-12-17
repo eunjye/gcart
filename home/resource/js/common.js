@@ -61,6 +61,7 @@
 				$('.header-area').html(data);
 				win[namespace].nav.hoverMenu(); // hover evt on nav
 				win[namespace].nav.slidingMenu(); // show/hide evt on nav
+				win[namespace].nav.openDepth2(); // 2depth links evt on nav
 				
 			}).catch(function(err) {
 				console.error('win.'+namespace+'.navLoad failed!!');
@@ -114,6 +115,22 @@
 					.on('click.openMenu', function(){
 						$header.toggleClass('open');
 					});
+			},
+			openDepth2: function(){
+				var $header = $('.header-area');
+				var $listDepth1 = $header.find('.nav-d1 > li');
+				var $btnDepth1 = $listDepth1.children('a');
+
+				console.log($btnDepth1)
+				$btnDepth1.on('click', function(e){
+					if ($(win).outerWidth() < 1025 && !!$(this).siblings('.nav-d2').length) {
+						var $parentList = $(this).closest('li');
+						e.preventDefault();
+						$listDepth1.not($parentList).removeClass('on');
+						$parentList.toggleClass('on');
+					}
+				})
+
 			}
 		},
 		mainSlider: {
@@ -160,6 +177,8 @@
 
 				win[namespace].nav.hoverMenu(); // hover evt on nav
 				win[namespace].nav.slidingMenu(); // show/hide evt on nav
+				win[namespace].nav.openDepth2(); // 2depth links evt on nav
+
 			})
 			$(doc).on('scroll.'+namespace, function(){
 
