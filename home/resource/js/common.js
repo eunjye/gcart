@@ -134,6 +134,21 @@
 				})
 			}
 		},
+		kakaomap: {
+			init: function(){
+				var container = document.getElementById('map');
+				var lating = [37.42813059869005, 126.98948304044714];
+				var mark = new kakao.maps.LatLng(lating[0], lating[1]);
+				var map = new kakao.maps.Map(container, {
+					center: mark,
+					level: 3
+				}); // create map
+				var marker = new kakao.maps.Marker({
+					position: mark
+				});
+				marker.setMap(map);
+			}
+		},
 		init: function(){
 
 			$(win).off('.'+namespace);

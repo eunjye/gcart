@@ -124,7 +124,12 @@
 	.vision-area .vision span { height:120px; line-height:120px; font-size:24px; }
 	.vision-area .value span:before { font-size:30px; margin:0 4px; }
 	.vision-area .value strong { width:140px; height:140px; font-size:24px; padding-top:53px; }
+	
+	.notice-header { padding:25px; }
+	.notice-cont { padding:25px 25px 0; }
 
+	.map-info > li { padding:25px 25px 25px 90px; }
+	.map-info > li:before { top:20px; left:0; transform:scale(.8); }
 }
 @media (max-width:765px) {
 	.link-list { margin:0 -1%; }
@@ -172,6 +177,11 @@
 	.btn-base .ico-arr { margin-left:-2px; margin-right:-8px; }
 
 	.btn-base { font-size:14px; }
+	
+	p.bul-dot,
+	ul.bul-dot > li { font-size:14px; padding-left:10px; }
+	p.bul-dot:before, 
+	ul.bul-dot > li:before { width:3px; height:3px; margin:-2px 4px 0 -8px; }
 
 	.footer-area .footer-grid { display:block; }
 	.footer-area .logo { display:block; }
@@ -222,4 +232,12 @@
 	.notice-header .subject { font-size:20px; }
 	.notice-header .desc > div {  }
 	.notice-cont { padding:20px 20px 0; font-size:14px; }
+
+	/* map */
+	.map-area { height:0; padding-top:70%; }
+	.map-desc { font-size:18px; }
+	.map-info > li { font-size:16px; padding-left:75px; }
+	.map-info > li strong { font-size:18px; }
+	.map-info > li:before { transform:scale(0.6); }
+	
 }

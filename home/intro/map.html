@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="과천문화재단 홈페이지">
+	<meta name="keywords" content="과천문화재단, 과천, 과천시, 과천문화">
+
+	<title>찾아오는 길 : 과천문화재단</title>
+
+	<link rel="stylesheet" href="/gcart/home/resource/css/app.css">
+
+	<script src="/gcart/home/resource/js/lib/jquery-1.12.4.min.js"></script>
+	<script src="/gcart/home/resource/js/lib/bluebird.min.js"></script>
+	<script src="/gcart/home/resource/js/lib/slick.min.js"></script>
+	<script src="/gcart/home/resource/js/common.js"></script>
+</head>
+<body>
+	<main id="wrap">
+		<header class="header-area"></header>
+		<!-- [Start] main-area -->
+		<section class="main-area" id="main">
+			<div class="visual-area" style="background-image:url('/gcart/home/resource/img/visual_intro.jpg');">
+				<div class="visual-inner">
+					<div class="tit-area">
+						<h2 class="tit-d1">찾아오는 길</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="cont-area">
+				<div class="cont-grid">
+					<div class="article bdb">
+						<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4871be889d5272d1e6d0f2c6a44fa5dd"></script> <!-- [D] 도메인이 127.0.0.1:5500 또는 gcart.or.kr 일 경우만 API가 실행됩니다. -->
+						<div id="map" class="map-area"></div>
+						<div class="map-desc">주소 : 경기도 과천시 통영로 5 과천시민회관 2층 </div>
+						<ul class="map-info">
+							<li class="subway">
+								<strong>지하철 이용 시 - 4호선 정부과천청사역 하차</strong>
+								<p class="bul-dot">정부과천청사역 9번, 10번 출구방향으로 나오시면 시민회관 지하 통로로 연결되어 있습니다.</p>
+							</li>
+							<li class="bus">
+								<strong>버스 이용 시 - 정부과천청사에서 하차</strong>
+								<ul class="bul-dot">
+									<li>일반버스 : 9(적), 1-1, 917, 11-1, 11-2, 11-3, 11-5, 777, 공항버스(죽전-인천공항)</li>
+									<li>좌석버스 : 1550-3, 7007-1, 3030</li>
+									<li>B간선 : 540, 441</li>
+									<li>G지선 : 4425</li>
+									<li>R광역 : 9502, 9503</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="btn-area tac">
+						<a href="./notice.html" class="btn-base primary"><span>목록가기<i class="ico-arr light"></i></span></a>
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				;(function ($, win, doc, undefined) {
+					$(doc).on('ready.GC', function(){
+						window.GC.kakaomap.init();
+					});
+				})(jQuery, window, document);
+			</script>
+		</section>
+		<!-- // [End] main-area -->
+		<footer class="footer-area"></footer>
+	</main>
+</body>
+</html>
