@@ -17,3 +17,4 @@ blockquote:before, blockquote:after, q:before, q:after { content:''; content:non
 table { border-collapse:collapse; border-spacing:0; table-layout:fixed; }
 img, button, a { vertical-align:middle; }
 button { background:none; border:none; }
+caption { opacity:0; position:absolute; display:block; width:1px; height:1px; overflow:hidden; color:transparent; }

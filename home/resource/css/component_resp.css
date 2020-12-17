@@ -62,6 +62,13 @@
 	.tbl-scroll { width:100%; overflow-x:auto; }
 	.tbl-scroll > table { width:auto; }
 
+	/* paging */
+	.paging-area { margin-top:30px; }
+	.paging-link { display:none; }
+	.paging-fraction { display:inline-block; height:35px; margin:0 5px; vertical-align:middle; line-height:35px; font-size:20px; text-align:center; }
+	.paging-fraction i { margin:0 3px;}
+	.paging-fraction .current { color:#f79433; }
+
 	/* main : visual */
 	.visual-area { height:0; padding-top:40vh; }
 	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; padding-top:70px; }
@@ -72,8 +79,9 @@
 	.slider-pagination.type-num { bottom:5%; }
 	.slider-pagination.type-num a { font-size:16px; }
 
+	.article .tit-area:first-child { padding-top:23px; }
 	.article .tit-area { margin:80px 0 35px; }
-	.article .btn-area { top:28px; }
+	.article .btn-area.upper { top:28px; }
 	.article .tit-area.pdr-s > p { margin-right:-195px; }
 
 	/* main : business */
@@ -129,7 +137,7 @@
 
 	.organization-area .item strong { min-width:100px; }
 	
-	.article .btn-area.col2 { position:static; margin-top:25px; text-align:center; }
+	.article .btn-area.upper.col2 { position:static; margin-top:25px; text-align:center; }
 
 	.greeting-area { padding:0; }
 	.greeting-area .greeting-img { position:static; width:100%; text-align:left; height:250px; margin-bottom:25px; }
@@ -182,10 +190,11 @@
 	.bbs-list .date { position:absolute; bottom:0; left:0; text-align:left; }
 	.bbs-list .subject a { max-width:calc(100% - 73px); }
 
-	.article { padding:23px 0 25px; }
+	.article { padding:0 0 25px; }
 	.article .tit-area { margin:60px 0 20px; }
+	.article .tit-area:first-child { padding-top:23px; }
 	.article .tit-area.pdr-s { padding-right:0; }
-	.article .btn-area { position:static; font-size:0; margin:25px -3px 0; text-align:center; }
+	.article .btn-area.upper { position:static; font-size:0; margin:25px -3px 0; text-align:center; }
 	.article .img-area { margin-top:20px; }
 	.article .tit-area.pdr-s > p { margin-right:0; }
 	.article .btn-area .btn-base { margin:0 3px; }
@@ -207,4 +216,10 @@
 	.vision-area .value span { display:block; }
 	.vision-area .value span:before { display:block; margin:15px 0; }
 	.vision-area .value strong { width:120px; height:120px; font-size:20px; }
+
+	/* notice */
+	.notice-header { padding:20px; }
+	.notice-header .subject { font-size:20px; }
+	.notice-header .desc > div {  }
+	.notice-cont { padding:20px 20px 0; font-size:14px; }
 }
