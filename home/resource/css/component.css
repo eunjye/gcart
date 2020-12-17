@@ -14,9 +14,10 @@ body { font-family:'Roboto', 'NotoSans', 'Dotum', 'sans-serif'; font-weight:500;
 .fc-primary { color:#0072bc !important; }
 
 /* title */
-.tit-d1 { font-weight:300; font-size:80px; text-align:center; }
-.tit-d2 { font-size:44px; font-weight:500; text-align:center; color:#000; }
-.tit-d3 { font-size:36px; font-weight:700; color:#000; }
+.tit-d1 { display:block; font-weight:300; font-size:80px; text-align:center; }
+.tit-d2 { display:block; font-size:44px; font-weight:500; text-align:center; color:#000; }
+.tit-d3 { display:block; font-size:36px; font-weight:700; color:#000; }
+.tit-d4 { display:block; font-size:27px; font-weight:700; color:#000; }
 .tit-sub { display:block; font-size:36px; font-weight:700; text-align:center; color:#f79433; }
 .desc-d1 { display:block; font-size:24px; font-weight:300; text-align:center; }
 .desc-d1:before { display:block; width:40px; height:2px; background:#fff; margin:25px auto 35px; content:""; }
@@ -185,6 +186,38 @@ body { font-family:'Roboto', 'NotoSans', 'Dotum', 'sans-serif'; font-weight:500;
 .organization-area .item.primary strong { background:#F79433; }
 .organization-area .item.secondary strong { background:#05B59D; }
 .organization-area .item.third strong { background:#0072BC; }
+
+/* intro
+====================== */
+.greeting-area { position:relative; padding-right:470px;  }
+.greeting-area .greeting-img { position:absolute; top:-70px; right:0; }
+.greeting-area .tit-d4 { margin-bottom:30px; }
+.greeting-inner { min-height:450px; font-size:21px; font-weight:400; }
+.greeting-inner p { line-height:1.7em; }
+.greeting-inner p + p { margin-top:10px; }
+.txt-sign { display:block; margin-top:30px; font-size:16px; color:#565656; }
+
+.vision-area { display:table; width:100%; }
+.vision-area > div { display:table-row; }
+.vision-area dt { display:table-cell; width:30%; vertical-align:middle; padding:30px 80px 30px 0; }
+.vision-area dt strong { display:block; width:100%; height:100px; padding-top:12px; border:6px solid #ededed; border-radius:50px; text-align:center; font-size:32px; font-weight:700; color:#0072BC; }
+.vision-area dt strong span { display:block; margin-bottom:-7px; opacity:.3; font-size:21px; text-transform:uppercase; }
+.vision-area dd { display:table-cell; width:70%; padding:30px 0; vertical-align:middle; }
+.vision-area .vision span { display:block; background:#ededed; text-align:center; color:#000; font-size:32px; font-weight:700; height:160px; line-height:160px; }
+.vision-area .value { font-size:0; text-align:center; }
+.vision-area .value span { display:inline-block; vertical-align:middle; }
+.vision-area .value strong { display:inline-block; width:240px; height:240px; border-radius:50%; color:#fff; font-size:36px; font-weight:700; text-align:center; vertical-align:middle; padding-top:70px; }
+.vision-area .value span:before { display:inline-block; width:auto; font-size:60px; color:#ededed; font-weight:700; content:"+"; vertical-align:middle; margin:0 10px; }
+.vision-area .value span:first-child:before { display:none; }
+.vision-area .value .community strong { background:#0072bc; }
+.vision-area .value .local strong { background:#05b59d; }
+.vision-area .value .culture strong { background:#f79433; }
+
+
+@media (max-width:1245px) {
+	.vision-area .value span:before { font-size:40px; }
+	.vision-area .value strong { padding-top:50px; width:190px; height:190px; }
+}
 
 /* only PC */
 @media (min-width:1025px) {

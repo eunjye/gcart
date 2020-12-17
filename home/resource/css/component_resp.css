@@ -18,9 +18,12 @@
 	.tit-d1 { font-size:50px; }
 	.tit-d2 { font-size:35px; }
 	.tit-d3 { font-size:25px; }
+	.tit-d4 { font-size:22px; }
 	.desc-d1 { font-size:20px; }
 	.desc-d2 { margin-top:10px; font-size:18px; word-break:keep-all; }
 	.desc-d1:before { margin:15px auto 25px; }
+
+	.br { display:none; }
 
 	/* button */
 	.btn-base { height:40px; padding:0 20px; line-height:40px; font-size:16px; }
@@ -50,7 +53,7 @@
 	.logo img { width:130px; height:auto; }
 	.nav-d1 { height:100%; padding:20px 40px 50px;overflow-y:auto; }
 	.nav-d1 > li { display:block; margin:25px 0 0; color:#000; font-size:20px; text-align:left; }
-	.nav-d2 { position:static; width:100%; margin:0; text-align:left; }
+	.nav-d2 { display:block; position:static; width:100%; margin:0; text-align:left; }
 	.nav-d2 > li { margin-top:10px; }
 
 	/* table */
@@ -98,6 +101,22 @@
 	.organization-area { margin:-10px 0; }
 	.organization-area .item { padding:10px 0; }
 	.organization-area .item strong { font-size:18px; height:40px; line-height:40px; min-width:150px; padding:0 10px; }
+
+	/* page : intro */
+	.greeting-area { padding-right:53%; }
+	.greeting-area .greeting-img { top:-10%; width:50%; }
+	.greeting-area .greeting-img img { width:100%; height:auto; }
+	.greeting-inner { font-size:18px; }
+	.greeting-area .tit-d4 { margin-bottom:10px; }
+
+	.vision-area dt { padding:15px 30px 15px 0; }
+	.vision-area dd { padding:15px 0; }
+	.vision-area dt strong { height:80px; padding-top:10px; font-size:24px; }
+	.vision-area dt strong span { font-size:18px; }
+	.vision-area .vision span { height:120px; line-height:120px; font-size:24px; }
+	.vision-area .value span:before { font-size:30px; margin:0 4px; }
+	.vision-area .value strong { width:140px; height:140px; font-size:24px; padding-top:53px; }
+
 }
 @media (max-width:765px) {
 	.link-list { margin:0 -1%; }
@@ -111,6 +130,19 @@
 	.organization-area .item strong { min-width:100px; }
 	
 	.article .btn-area.col2 { position:static; margin-top:25px; text-align:center; }
+
+	.greeting-area { padding:0; }
+	.greeting-area .greeting-img { position:static; width:100%; text-align:left; height:250px; margin-bottom:25px; }
+	.greeting-area .greeting-img img { height:100%; width:auto; }
+	.greeting-inner { min-height:0; }
+
+	.vision-area > div { display:block; margin-top:40px; }
+	.vision-area > div:first-child { margin-top:0; }
+	.vision-area dt { display:block; width:100%; padding:0 0 20px; }
+	.vision-area dt strong { width:250px; margin:0 auto; }
+	.vision-area dd { display:block; width:100%; padding:0; }
+	.vision-area .vision span { height:auto; min-height:100px; line-height:1.4em; padding:40px 25px; font-size:20px; word-break:keep-all; line-height:1.7em; }
+	.vision-area .value strong { width:120px; height:120px; padding-top:48px; font-size:20px; }
 }
 
 /* mobile */
@@ -125,6 +157,7 @@
 	.tit-d1 { font-size:35px; }
 	.tit-d2 { font-size:28px; }
 	.tit-d3 { font-size:24px; }
+	.tit-d4 { font-size:20px; }
 	.desc-d1 { font-size:18px; }
 	.desc-d2 { font-size:16px; margin-top:15px; }
 
@@ -163,4 +196,15 @@
 	.organization-area .item { padding:10px 0; }
 	.organization-area .item strong { font-size:14px; height:35px; line-height:35px; padding:0 8px; }
 	.organization-area .item.third strong { padding:0 5px; font-size:12px; min-width:0; }
+	
+	/* page : intro */
+	.greeting-area .greeting-img img { height:100%; width:auto; }
+	.greeting-inner { font-size:16px; }
+	.txt-sign { margin-top:20px; font-size:14px; }
+	.vision-area dt strong { height:65px; width:200px; padding-top:7px; font-size:20px; }
+	.vision-area dt strong span { font-size:14px; }
+	.vision-area .vision span { min-height:0; padding:15px; font-size:20px; line-height:1.4em; }
+	.vision-area .value span { display:block; }
+	.vision-area .value span:before { display:block; margin:15px 0; }
+	.vision-area .value strong { width:120px; height:120px; font-size:20px; }
 }
