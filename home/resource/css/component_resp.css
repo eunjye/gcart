@@ -5,6 +5,8 @@
 	/* common */
 	body { font-size:14px; }
 
+	.only-pc { display:none !important; }
+
 	/* layout */
 	.cont-grid { padding:80px 25px; }
 	.cont-inner { margin-top:45px; }
@@ -51,6 +53,12 @@
 	.nav-d2 { position:static; width:100%; margin:0; text-align:left; }
 	.nav-d2 > li { margin-top:10px; }
 
+	/* table */
+	.tbl-base th,
+	.tbl-base td { padding:10px; font-size:16px; }
+	.tbl-scroll { width:100%; overflow-x:auto; }
+	.tbl-scroll > table { width:auto; }
+
 	/* main : visual */
 	.visual-area { height:0; padding-top:40vh; }
 	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; padding-top:70px; }
@@ -60,6 +68,9 @@
 
 	.slider-pagination.type-num { bottom:5%; }
 	.slider-pagination.type-num a { font-size:16px; }
+
+	.article .tit-area { margin:80px 0 35px; }
+	.article .btn-area { top:28px; }
 
 	/* main : business */
 	.cont-area.business { background:#ededed; }
@@ -81,6 +92,11 @@
 	.intro-list > li:before { margin-bottom:10px; }
 	.intro-list .tit { font-size:20px; }
 	.intro-list .desc { font-size:16px; }
+
+	/* page : organization */
+	.organization-area { margin:-10px 0; }
+	.organization-area .item { padding:10px 0; }
+	.organization-area .item strong { font-size:18px; height:40px; line-height:40px; min-width:150px; padding:0 10px; }
 }
 @media (max-width:765px) {
 	.link-list { margin:0 -1%; }
@@ -90,10 +106,16 @@
 	.intro-list > li:first-child { margin-top:0; }
 	.intro-list > li { margin-top:25px; border:0; float:none; width:100%; }
 	.intro-list .btn-area { margin-top:15px; }
+
+	.organization-area .item strong { min-width:100px; }
 }
 
 /* mobile */
 @media (max-width:500px) {
+	/* table */
+	.tbl-base th,
+	.tbl-base td { font-size:14px; }
+
 	.cont-inner { margin-top:35px; }
 
 	.tit-sub { font-size:20px; }
@@ -121,7 +143,14 @@
 	.bbs-list .subject a { max-width:calc(100% - 73px); }
 
 	.article { padding:23px 0 25px; }
+	.article .tit-area { margin:60px 0 20px; }
 	.article .tit-area.pc-pdr-s { padding-right:0; }
 	.article .btn-area { position:static; margin-top:25px; text-align:center; }
 	.article .img-area { margin-top:20px; }
+	
+	/* page : organization */
+	.organization-area { margin:-10px 0; }
+	.organization-area .item { padding:10px 0; }
+	.organization-area .item strong { font-size:14px; height:35px; line-height:35px; padding:0 8px; }
+	.organization-area .item.third strong { padding:0 5px; font-size:12px; min-width:0; }
 }
