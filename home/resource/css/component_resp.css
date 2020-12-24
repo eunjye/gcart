@@ -93,12 +93,13 @@
 	.slider-pagination.type-num a { font-size:16px; }
 
 	.article .tit-area:first-child { padding-top:23px; }
-	.article .tit-area { margin:80px 0 35px; }
+	.article .tit-area { margin:80px 0 25px; }
 	.article .btn-area.upper { top:28px; }
 	.article .tit-area.pdr-s > p { margin-right:-195px; }
 
 	/* main : business */
 	.cont-area.business { background:#ededed; }
+	.article .img-area { margin-top:25px; }
 	.link-list a { height:250px; }
 	.link-list a div { padding-top:28px; }
 	.link-list strong { max-width:111px; font-size:30px; }
@@ -125,7 +126,7 @@
 
 	/* page : intro */
 	.greeting-area { padding-right:53%; }
-	.greeting-area .greeting-img { top:-10%; width:50%; }
+	.greeting-area .greeting-img { top:-10%; width:50%; max-width:456px; }
 	.greeting-area .greeting-img img { width:100%; height:auto; }
 	.greeting-inner { font-size:18px; }
 	.greeting-area .tit-d4 { margin-bottom:10px; }
@@ -158,7 +159,7 @@
 	.article .btn-area.upper.col2 { position:static; margin-top:25px; text-align:center; }
 
 	.greeting-area { padding:0; }
-	.greeting-area .greeting-img { position:static; width:100%; text-align:left; height:250px; margin-bottom:25px; }
+	.greeting-area .greeting-img { position:static; width:100%; text-align:left; height:290px; margin-bottom:25px; }
 	.greeting-area .greeting-img img { height:100%; width:auto; }
 	.greeting-inner { min-height:0; }
 
@@ -215,7 +216,6 @@
 
 	.article { padding:0 0 25px; }
 	.article .tit-area { margin:60px 0 20px; }
-	.article .tit-area:first-child { padding-top:23px; }
 	.article .tit-area.pdr-s { padding-right:0; }
 	.article .btn-area.upper { position:static; font-size:0; margin:25px -3px 0; text-align:center; }
 	.article .img-area { margin-top:20px; }
