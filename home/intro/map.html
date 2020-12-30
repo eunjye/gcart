@@ -39,7 +39,20 @@
 					<div class="article bdb">
 						<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4871be889d5272d1e6d0f2c6a44fa5dd"></script> <!-- [D] 도메인이 127.0.0.1:5500 또는 gcart.or.kr 일 경우만 API가 실행됩니다. -->
 						<div id="map" class="map-area"></div>
-						<div class="map-desc">주소 : 경기도 과천시 통영로 5 과천시민회관 2층 </div>
+						<div class="map-desc">
+							주소 : <span id="addressID">경기도 과천시 통영로 5 과천시민회관 2층 </span>
+							<button type="button" class="btn-base primary" onclick="
+								var t = document.createElement('textarea');
+								document.body.appendChild(t);
+								t.style.opacity = '0';
+								t.style.position = 'absolute';
+								t.value = document.querySelector('#addressID').innerText;
+								t.select();
+								document.execCommand('copy');
+								document.body.removeChild(t);
+								alert('클립보드에 복사되었습니다.'); 
+								"><span>지번 복사</span></button>
+						</div>
 						<ul class="map-info">
 							<li class="subway">
 								<strong>지하철 이용 시 - 4호선 정부과천청사역 하차</strong>
@@ -56,9 +69,6 @@
 								</ul>
 							</li>
 						</ul>
-					</div>
-					<div class="btn-area tac">
-						<a href="./notice.html" class="btn-base primary"><span>목록가기<i class="ico-arr light"></i></span></a>
 					</div>
 				</div>
 			</div>

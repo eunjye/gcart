@@ -34,6 +34,7 @@ body { font-family:'Roboto', 'NotoSans', 'Dotum', 'sans-serif'; font-weight:500;
 .btn-base.primary:before { opacity:0; }
 .btn-base.primary:hover { background:linear-gradient(-135deg, #0072bc 0%, #00b49d 100%); }
 .btn-base .ico-arr { margin:-4px 0 0 5px; }
+.btn-base .ico-download { margin:-4px 0 0 4px; }
 
 .btn-menu { position:relative; display:inline-block; width:30px; height:30px; }
 .btn-menu:before,
@@ -60,7 +61,8 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 
 /* icon */
 [class*="ico-"] { display:inline-block; vertical-align:middle; }
-.ico-arr { width:40px; height:10px; background:url('/gcart/home/resource/img/ico_arrow_r.png') right 0/40px auto no-repeat; }
+.ico-arr { width:40px; height:10px; background:url('../img/ico_arrow_r.png') right 0/40px auto no-repeat; }
+.ico-download { width:18px; height:18px; background:url('../img/ico_download.png') right 0/18px auto no-repeat; }
 .ico-arr.light { background-position-y:-10px; }
 
 .txt-dot { margin:0 -0.3em; }
@@ -128,12 +130,15 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 .visual-area .tit-area { margin-top:120px; }
 .visual-area.main { height:900px; }
 .visual-area.main:after { display:none; }
-.visual-area.main .tit-area { position:absolute; top:360px; left:0; width:100%; pointer-events:none; margin:0; }
+.visual-area.main .tit-area { z-index:1; position:relative; top:360px; left:0; width:100%; margin:0; }
 .visual-area .visual-inner { z-index:2; position:relative; height:100%; padding:100px 20px 0; margin:0 auto; }
-.slider-visual { z-index:-1; position:absolute; top:0; left:0; width:100%; height:100%; }
-.slider-visual * { height:100%; }
-.slider-visual .slide { background-size:cover; background-position:center center; }
-.slider-visual .slide:after { z-index:1; position:absolute; display:block; top:0; left:0; right:0; bottom:0; background:linear-gradient(to top, rgba(0,0,0,.2) 0%, rgba(0,0,0,.05) 30%, rgba(0,0,0,.2) 100%); content:""; }
+.slider-visual { position:absolute; top:0; left:0; width:100%; height:100%; }
+.slider-visual .slider-inner,
+.slider-visual .slick-list,
+.slider-visual .slick-track,
+.slider-visual .slick-slide { height:100%; }
+.slider-visual .slide { position:relative; background-size:cover; background-position:center center; }
+.slider-visual .slide:after { z-index:0; position:absolute; display:block; top:0; left:0; right:0; bottom:0; background:linear-gradient(to top, rgba(0,0,0,.2) 0%, rgba(0,0,0,.05) 30%, rgba(0,0,0,.2) 100%); content:""; }
 .slider-pagination.type-num { position:absolute; left:0; bottom:60px; width:100%; text-align:right; padding-right:20px; }
 .slider-pagination.type-num li { display:inline-block; margin:0 5px; }
 .slider-pagination.type-num a { background:none; width:auto; height:auto; font-size:20px; font-weight:300; }
@@ -155,7 +160,7 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 .bbs-list .date { width:11%; white-space:nowrap; color:#898989; font-size:15px; font-weight:400; text-align:right; }
 
 /* main : business  */
-.cont-area.business { background:url('/gcart/home/resource/img/bg_business.jpg') center center/cover no-repeat; }
+.cont-area.business { background:url('../img/bg_business.jpg') center center/cover no-repeat; }
 .link-list { }
 .link-list:after { display:block; clear:both; content:""; }
 .link-list .link-visual { float:left; width:23.5%; margin-left:2%; }
@@ -175,7 +180,7 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 .intro-list:after { display:block; clear:both; content:""; }
 .intro-list > li { float:left; width:33%; text-align:center; border-left:1px solid #d8d8d8; }
 .intro-list > li:first-child { border-left:0; }
-.intro-list > li:before { display:block; width:105px; height:105px; margin:0 auto 25px; background:url('/gcart/home/resource/img/sp_ico_intro.jpg') 0 0/105px auto no-repeat; content:""; }
+.intro-list > li:before { display:block; width:105px; height:105px; margin:0 auto 25px; background:url('../img/sp_ico_intro.jpg') 0 0/105px auto no-repeat; content:""; }
 .intro-list > li.organization:before { background-position-y:-105px; }
 .intro-list > li.map:before { background-position-y:-210px; }
 .intro-list .tit { font-size:32px; color:#000; display:block; }
@@ -214,12 +219,13 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 /* intro
 ====================== */
 .greeting-area { position:relative; padding-right:470px;  }
-.greeting-area .greeting-img { position:absolute; top:-70px; right:0; }
+.greeting-area .greeting-img { position:absolute; top:-70px; right:0; width:360px; }
+.greeting-area .greeting-img img { width:100%; height:auto; }
 .greeting-area .tit-d4 { margin-bottom:30px; }
 .greeting-inner { min-height:450px; font-size:21px; font-weight:400; }
 .greeting-inner p { line-height:1.7em; }
 .greeting-inner p + p { margin-top:10px; }
-.txt-sign { display:block; margin-top:30px; font-size:16px; color:#565656; }
+.txt-sign { display:block; margin-top:22px; font-size:16px; color:#565656; text-align:center; font-weight:400; }
 
 .vision-area { display:table; width:100%; }
 .vision-area > div { display:table-row; }
@@ -256,11 +262,12 @@ ul.bul-dot > li { color:#454545; margin-top:8px; padding-left:16px; font-size:18
 ====================== */
 .map-area { position:relative; margin:50px 0 35px; width:100%; height:600px; }
 .map-desc { font-size:21px; font-weight:400; color:#212121; }
+.map-desc .btn-base { margin-left:10px; }
 .map-info { border-top:1px solid #cdcdcd; margin-top:30px; color:#212121; font-weight:400; }
 .map-info > li { position:relative; border-top:1px solid #e7e7e7; padding:30px 60px 30px 175px; font-size:18px; color:#454545; }
 .map-info > li:first-child { border-top:0; }
 .map-info > li:last-child { padding-bottom:0; }
-.map-info > li:before { position:absolute; top:30px; left:60px; display:block; width:80px; height:80px; background:0 0/80px auto url('/gcart/home/resource/img/sp_ico_map.jpg') no-repeat; content:""; }
+.map-info > li:before { position:absolute; top:30px; left:60px; display:block; width:80px; height:80px; background:0 0/80px auto url('../img/sp_ico_map.jpg') no-repeat; content:""; }
 .map-info > li.bus:before { background-position-y:-80px; }
 .map-info > li strong { display:block; margin-bottom:15px; font-size:21px; }
 

@@ -35,7 +35,7 @@
 	.tag-new { font-size:12px; }
 
 	/* header */
-	.header-area { height:70px; }
+	.header-area { height:70px; overflow:visible; }
 	.header-area:after { top:68px; }
 	.header-area .gnb-area { float:none; position:fixed; padding:70px 0 0; margin:0; top:0; left:-100%; background:#fff; width:100%; height:100%; transition:all ease-in-out .35s; }
 	.header-area.open .gnb-area { left:0; }
@@ -87,7 +87,7 @@
 	.visual-area .visual-inner { position:absolute; top:0; left:0; width:100%; padding-top:70px; }
 	.visual-area .tit-area { margin-top:calc(20vh - 35px); transform:translateY(-50%); }
 	.visual-area.main { height:0; padding-top:55vh; }
-	.visual-area.main .tit-area { top:50%; transform:translateY(-50%); }
+	.visual-area.main .tit-area { padding:0 30px; top:50%; transform:translateY(-50%); }
 
 	.slider-pagination.type-num { bottom:5%; }
 	.slider-pagination.type-num a { font-size:16px; }
@@ -125,9 +125,8 @@
 	.organization-area .item strong { font-size:18px; height:40px; line-height:40px; min-width:150px; padding:0 10px; }
 
 	/* page : intro */
-	.greeting-area { padding-right:53%; }
-	.greeting-area .greeting-img { top:-10%; width:50%; max-width:456px; }
-	.greeting-area .greeting-img img { width:100%; height:auto; }
+	.greeting-area { padding-right:340px; }
+	.greeting-area .greeting-img { top:-10%; width:300px; }
 	.greeting-inner { font-size:18px; }
 	.greeting-area .tit-d4 { margin-bottom:10px; }
 
@@ -159,8 +158,9 @@
 	.article .btn-area.upper.col2 { position:static; margin-top:25px; text-align:center; }
 
 	.greeting-area { padding:0; }
-	.greeting-area .greeting-img { position:static; width:100%; text-align:left; height:290px; margin-bottom:25px; }
-	.greeting-area .greeting-img img { height:100%; width:auto; }
+	.greeting-area .greeting-img { position:static; width:100%; text-align:left; margin-bottom:25px; }
+	.greeting-area .greeting-img img { max-height:290px; width:auto; }
+	.txt-sign { text-align:left; }
 	.greeting-inner { min-height:0; }
 
 	.vision-area > div { display:block; margin-top:40px; }
