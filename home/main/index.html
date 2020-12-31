@@ -24,6 +24,24 @@
 <body>
 	<main id="wrap">
 		<header class="header-area"></header>
+		<!-- [Start] Layer Popup  -->
+		<div class="layer-wrap" id="modalAD" style="display:none;">
+			<div class="layer-inner">
+				<div class="ad-img">
+					<img src="../resource/img/@temp/@ad.jpg" alt="">
+				</div>
+				<input type="checkbox" id="chkNoShowToday" onchange="
+				">
+				<label for="chkNoShowToday" class="lb-check light">오늘 하루 보지않기</label>
+				<button type="button" class="layer-btn-close btn-close" onclick="
+					$('#modalAD').hide();
+					if (document.querySelector('#chkNoShowToday').checked) {
+						window.GC.cookieControl.setCookie('todayCookie', 'done', 1);
+					}
+				"><span class="blind">닫기</span></button>
+			</div>
+		</div>
+
 		<!-- [Start] main-area -->
 		<section class="main-area" id="main">
 			<div class="visual-area main">
@@ -177,6 +195,9 @@
 				;(function ($, win, doc, undefined) {
 					$(doc).on('ready.GC', function(){
 						GC.mainSlider.init();
+						if (!window.GC.cookieControl.isHasCookie()){
+							$('#modalAD').show();
+						};
 					});
 				})(jQuery, window, document);
 			</script>

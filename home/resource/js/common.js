@@ -154,7 +154,7 @@
 		kakaomap: {
 			init: function(){
 				var container = document.getElementById('map');
-				var lating = [37.42813059869005, 126.98948304044714];
+				var lating = [37.42815615851663, 126.98949376928282];
 				var mark = new kakao.maps.LatLng(lating[0], lating[1]);
 				var map = new kakao.maps.Map(container, {
 					center: mark,
@@ -164,6 +164,24 @@
 					position: mark
 				});
 				marker.setMap(map);
+			}
+		},
+		cookieControl: {
+			setCookie: function ( name, value, expiredays ) {
+				var todayDate = new Date();
+				todayDate.setDate( todayDate.getDate() + expiredays );
+				document.cookie = name + '=' + escape( value ) + '; path=/; expires=' + todayDate.toGMTString() + ';'
+				console.log(document.cookie);
+			},
+			isHasCookie: function () {
+				var cookiedata = document.cookie;
+				console.log(cookiedata);
+				if ( cookiedata.indexOf('todayCookie=done') < 0 ){
+						return false;
+				}
+				else {
+						return true;
+				}
 			}
 		},
 		init: function(){
